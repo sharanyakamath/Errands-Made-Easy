@@ -4,7 +4,7 @@
 <span class="content"><%= micropost.content %></span>
 <span class="timestamp">Submitted <%= time_ago_in_words(micropost.created_at) %> ago.
   <% if current_user.admin? %>
-  <%= link_to "Resolve", micropost, method: :delete, data: { confirm: "Mark this complaint as resolved?" } %>
+  <%= link_to "Do this", micropost, method: :delete, data: { confirm: "Are you sure you want to do this?" } %>
   <% end %>
 </span>
 </li>

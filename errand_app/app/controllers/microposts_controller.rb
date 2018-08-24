@@ -5,7 +5,7 @@ class MicropostsController < ApplicationController
   def create
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
-      flash[:success] = "Your complaint was submitted successfully."
+      flash[:success] = "Your errand was submitted successfully."
       redirect_to root_url
     else
       @feed_items = []
@@ -16,7 +16,7 @@ class MicropostsController < ApplicationController
   def destroy
     @micropost = Micropost.find_by(id: params[:id])
     @micropost.destroy
-    flash[:success] = "Complaint Resolved"
+    flash[:success] = "Errand Resolved"
     redirect_to request.referrer || root_url
   end
 

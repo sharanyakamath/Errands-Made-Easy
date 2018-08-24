@@ -10,7 +10,7 @@
 </aside>
 <div class="col-md-8">
 <% if @user.microposts.any? %>
-<h3></a>Complaints (<%= @user.microposts.count %>)</h3>
+<h3></a>I need help with the following: (<%= @user.microposts.count %>)</h3>
 <ol class="microposts">
 <%= render @microposts %>
 </ol>
