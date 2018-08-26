@@ -42,15 +42,14 @@ class UsersController < ApplicationController
     @users= User.paginate(page: params[:page])
   end
   def destroy
-      User.find(params[:id]).destroy
-      flash[:success] = "User deleted"
-      redirect_to users_url
-    end
+    User.find(params[:id]).destroy
+    flash[:success] = "User deleted"
+    redirect_to users_url
+  end
   private
 
     def user_params
-      params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation)
+      params.require(:user).permit(:name, :email, :phone, :password, :password_confirmation)
     end
 
     # def logged_in_user
@@ -68,6 +67,5 @@ class UsersController < ApplicationController
 
     def admin_user
       redirect_to(root_url) unless  current_user.admin?
-
-      end
+    end
 end
