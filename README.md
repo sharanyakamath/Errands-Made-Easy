@@ -1,4 +1,4 @@
-# Ruby-on-Rails
+# Errands Made Easy
 ## All necessary installation steps to setup the project from scratch.
 - sudo apt-get update
 - sudo apt-get install curl
