@@ -11,8 +11,8 @@
 - gem install rails
 
 ## Complete steps to run your project.
-- cd Task_2
-- cd complaint_app
+- cd Errands-Made-Easy
+- cd errand_app
 - bundle install
 - bundle update
 - rails server
@@ -22,21 +22,13 @@
 - Sign-up for new users
 - Login for existing users
 - Admin login detais:
-	 <br> email-id: admin@nitk.edu.in 
-	 <br> password: 123456
+	 <br> email-id: admin@admin.com 
+	 <br> password: admin123
 
 - Users can update their profiles i.e. change profile picture, name, password or email.
-- Users can submit complaint which will be visible on their profile.
-- Users can view other users' profiles and see their complaints.
+- Users can submit errand which will be visible on their profile.
+- Users can view other users' profiles and see their errands.
 - Admin can delete users.
-- Admin can resolve complaints. Complaint will get deleted when resolved.
-
-## List of non implemented features.
-- Comments feature
-- Status and Respondent. Upon resolving, complaint gets deleted.
-
-## List of all the known bugs.
-- Admin can also write complaint but can't see which complaints he has resolved.
 
 ## References used.
 - Ruby on Rails Tutorial by Michael Hartl 4th edition.
