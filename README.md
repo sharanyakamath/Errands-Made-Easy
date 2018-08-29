@@ -15,6 +15,8 @@
 - cd errand_app
 - bundle install
 - bundle update
+- rails db:migrate
+- rails db:seed
 - rails server
 
 ## List of all implemented features.
