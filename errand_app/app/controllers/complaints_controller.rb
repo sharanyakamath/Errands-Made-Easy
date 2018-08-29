@@ -11,7 +11,8 @@ class ComplaintsController < ApplicationController
   end
 
   def destroy
-      current_user.complaints.create!(content: Complaint.find(params[:id]).content)
+      # Complaint.find(params[:id]).resolved= true
+      current_user.complaints.create!(content: Complaint.find(params[:id]).content, resolved:true)
       flash[:success]= "Errand Resolved"
       redirect_to root_url
   end
@@ -19,6 +20,6 @@ class ComplaintsController < ApplicationController
   private
 
   def complaint_params
-    params.require(:complaint).permit(:content)
+    params.require(:complaint).permit(:content, :title, :resolved, :user)
   end
 end
