@@ -5,12 +5,8 @@
   <span class="content"><%= complaint.content %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(complaint.created_at) %> ago.
-    <% if complaint.status==false %>
-    <span><div><b>Status: Pending</b></div> </span>
-      <% else %>
-    <span><div><b>Status: Resolved</b></div> </span>
-      <% end %>
-    <% if !current_user?(complaint) %>
+    <span><div><b>Resolved Status: <%=complaint.resolved%></b></div> </span>
+    <% if !current_user?(complaint) && complaint.resolved==false %>
       <%= link_to "resolve", complaint, method: :delete, data: { confirm: "You sure?" } %>
     <% end %>
 
