@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20180827151933) do
     t.string "password_digest"
     t.string "remember_digest"
     t.boolean "admin", default: false
-    t.text "address"
+    t.string "address"
     t.string "phone"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
