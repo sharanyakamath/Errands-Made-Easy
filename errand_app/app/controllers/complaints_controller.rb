@@ -20,10 +20,8 @@ class ComplaintsController < ApplicationController
   private
 
   def complaint_params
-<<<<<<< HEAD
-    params.require(:complaint).permit(:content, :title)
-=======
+
+
     params.require(:complaint).permit(:content, :title, :resolved, :user)
->>>>>>> 2c7d09b9673f2645ebd878a0e659d2bcef533e93
   end
 end
