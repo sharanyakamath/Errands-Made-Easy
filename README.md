@@ -19,7 +19,7 @@
 - rails db:seed
 - rails server
 
-## Admin login detais
+## Admin login details
 - email-id: admin@admin.com 
 - password: admin123
 
