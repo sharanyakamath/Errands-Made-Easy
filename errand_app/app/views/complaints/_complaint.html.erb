@@ -10,9 +10,8 @@
       <% else %>
     <span><div><b>Status: Resolved</b></div> </span>
       <% end %>
-    <% if current_user.admin? && !current_user?(complaint) %>
-    <%= link_to "resolve", complaint, method: :delete,
-                  data: { confirm: "You sure?" } %>
-  <% end %>
+    <% if !current_user?(complaint) %>
+      <%= link_to "resolve", complaint, method: :delete, data: { confirm: "You sure?" } %>
+    <% end %>
 
 </li>

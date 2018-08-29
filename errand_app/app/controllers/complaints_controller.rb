@@ -11,7 +11,7 @@ class ComplaintsController < ApplicationController
   end
 
   def destroy
-      Complaint.find(params[:id]).destroy
+      current_user.complaints.create!(content: Complaint.find(params[:id]).content)
       flash[:success]= "Errand Resolved"
       redirect_to root_url
   end
