@@ -7,6 +7,7 @@
 - gem update --system
 - gem update
 - sudo apt install libxml2-dev zlib1g-dev
+- sudo apt-get install sqlite3 libsqlite3-dev
 - gem install bundler
 - gem install nokogiri
 - gem install rails
