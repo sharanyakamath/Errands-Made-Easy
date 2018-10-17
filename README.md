@@ -6,6 +6,7 @@
 - sudo apt-get install nodejs
 - gem update --system
 - gem update
+- sudo apt install libxml2-dev zlib1g-dev
 - gem install bundler
 - gem install nokogiri
 - gem install rails
